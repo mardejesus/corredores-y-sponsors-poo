@@ -19,4 +19,14 @@ public class CarreraCalle extends Carrera{
             puntos = 1;
         }
     }
+
+    // interfaz
+    @Override
+    public boolean esPatrocinable() {
+        if (corredoresInscriptos.size() >= 100){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -1,4 +1,4 @@
-public class Corredor {
+public class Corredor implements Patrocinable{
     private int carrerasTotales;
     private int distanciaMaxima;
     private int puntajeAcumulado;
@@ -41,5 +41,13 @@ public class Corredor {
         return nombre;
     }
 
-
+    // interfaz
+    @Override
+    public boolean esPatrocinable() {
+        if (carrerasTotales >= 3){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

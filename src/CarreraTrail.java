@@ -26,4 +26,13 @@ public class CarreraTrail extends Carrera{
         puntos = (desnivel / 1000) + (distancia / 20);
     }
 
+    // interfaz
+    @Override
+    public boolean esPatrocinable() {
+        for (Corredor corredor : corredoresInscriptos){
+            if (corredor.getPuntajeAcumulado() >= 5 || desnivel >= 2000){
+                return true;
+            }
+        } return false;
+    }
 }

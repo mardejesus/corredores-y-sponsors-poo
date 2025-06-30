@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Carrera {
+public abstract class Carrera implements Patrocinable{
     protected final String nombre;
     protected final int distancia;
     protected Set<Corredor> corredoresInscriptos = new HashSet<>();

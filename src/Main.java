@@ -65,13 +65,20 @@ public class Main {
         System.out.println("---");
         paloma.inscribirse(peques);
         tino.inscribirse(peques);
-        juani.inscribirse(peques);
         System.out.println("Inscriptos Carrera peques:");
         peques.recordarCorredoresInscriptos();
         System.out.println("\npuntaje paloma: "+paloma.getPuntajeAcumulado());
         System.out.println("distancia máxima paloma: "+paloma.recordarDistanciaMaxima());
         System.out.println("carreras totales paloma: "+paloma.recordarCarreras());
 
+        // crear sponsors y su flujo
+        Sponsor martin = new Sponsor();
+        martin.patrocinar(paloma); // si
+        martin.patrocinar(juani); // no
+        martin.patrocinar(cordoba); // si
+        martin.patrocinar(calleLarga); // no
+        martin.patrocinar(peques); // no
+        System.out.println(martin.cantidadPatrocinada()); // 2
 
     }
 }

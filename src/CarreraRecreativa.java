@@ -13,4 +13,10 @@ public class CarreraRecreativa extends Carrera{
     public void determinarPuntos(Corredor corredor) {
         puntos = 0;
     }
+
+    // interfaz
+    @Override
+    public boolean esPatrocinable() {
+        return false;
+    }
 }
